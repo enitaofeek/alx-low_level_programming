@@ -1,6 +1,10 @@
-i#include <stdio.h>
+#include <stdio.h>
 
-
+/**
+ * main - This is a  program that prints the size of various types
+ * based on the computer and it is compiled and run on ...
+ * Return: Always 0
+ */
 int main(void)
 {
 	char a;
