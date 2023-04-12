@@ -1,33 +1,39 @@
-#include "main.h"
+#include <stdio.h>
 #include <stdlib.h>
+#include "main.h"
 
 /**
- * create_array - create array of size and assign char c
- * @size: size of array
- * @c: char to assign
- * Description: create array of size and assign char c
- * Return: pointer to array, NULL if fail
- *
+ * _strdup - duplicate to new memory space location
+ * @str: char
+ * Return: 0
  */
 
-char *create_array(unsigned int size, char c)
+char *_strdup(char *str)
 
 {
 
-	char *str;
+	char *aaa;
 
-	unsigned int i;
+	int i, r = 0;
 
-	str = malloc(sizeof(char) * size);
+	if (str == NULL)
+		return (NULL);
 
-	if (size == 0 || str == NULL)
+	i = 0;
+
+	while (str[i] != '\0')
+
+		i++;
+
+	aaa = malloc(sizeof(char) * (i + 1));
+
+	if (aaa == NULL)
 
 		return (NULL);
 
-	for (i = 0; i < size; i++)
+	for (r = 0; str[r]; r++)
 
-		str[i] = c;
+		aaa[r] = str[r];
 
-	return (str);
-
+	return (aaa);
 }
